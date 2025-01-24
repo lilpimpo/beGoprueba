@@ -1,4 +1,4 @@
-import PickDropInf from "../InfoFrame/PickDropInf";
+import PickNdDrop from "../InfoFrame/PickDropInf";
 import "./orderszStylo.css"
 
 //interface Props {}
@@ -6,10 +6,9 @@ import "./orderszStylo.css"
 const Ordersz = () => {
   return (
     <div className="OrdenesCont">
-        <h2>Order with numbr</h2>
         
-        <PickDropInf />
-        <button>PickUpTime?</button>
+        <PickNdDrop />
+        <button className="">PickUpTime?</button>
         <button>Resume</button>
     </div>
   )
