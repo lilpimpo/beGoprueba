@@ -1,5 +1,6 @@
 export { default as Backo } from "./Backo";
 export { default as Carrillo } from "./Carrillo";
+export { default as Eye } from "./Eye";
 export { default as Notificazion } from "./Notificazion";
 export { default as Search } from "./Search";
 export { default as Traile } from "./Traile";

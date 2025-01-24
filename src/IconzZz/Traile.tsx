@@ -1,11 +1,11 @@
+import * as React from "react";
 import type { SVGProps } from "react";
 const SvgTraile = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="1em"
     height="1em"
-    fill="currentColor"
-    stroke="currentColor"
+    fill="none"
     viewBox="0 0 41 14"
     {...props}
   >

@@ -4,12 +4,11 @@ import "./orderszStylo.css"
 //interface Props {}
 
 const Ordersz = () => {
+ 
+
   return (
     <div className="OrdenesCont">
-        
-        <PickNdDrop />
-        <button className="">PickUpTime?</button>
-        <button>Resume</button>
+        <PickNdDrop /> 
     </div>
   )
 }

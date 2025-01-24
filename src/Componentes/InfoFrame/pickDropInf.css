@@ -1,1 +1,77 @@
-/*# sourceMappingURL=pickDropInf.css.map */
+@charset "UTF-8";
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+.grey-dot-bg::before {
+  content: "•";
+  color: grey;
+  margin-right: 5px;
+  font-size: 2em;
+  vertical-align: middle;
+}
+
+.blue-dot-bg::before {
+  content: "•";
+  color: blue;
+  margin-right: 5px;
+  font-size: 2em;
+  vertical-align: middle;
+}
+
+.listaNoStylo {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tablaInfo {
+  position: relative;
+  border: 1px solid;
+  border-radius: 2em;
+  width: 70%;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+}
+.tablaInfo .orderNumba {
+  font-size: 1em;
+  font-weight: normal;
+  color: #6e6e6e;
+  display: inline-flex;
+  position: relative;
+  margin-right: auto;
+}
+.tablaInfo .orderNumba p {
+  font-weight: bold;
+  margin-left: 4px;
+  margin-top: 0px;
+  color: #fff;
+}
+
+.statusTexto {
+  display: inline;
+  font-size: 12px;
+  margin-right: 16px;
+}
+
+.orderIcons {
+  position: relative;
+  display: inline-flex;
+  border-bottom: 1px solid rgb(131, 131, 131);
+  width: 100%;
+}
+.orderIcons .traile {
+  vertical-align: bottom;
+  margin-left: 16px;
+  margin-top: 5px;
+}
+.orderIcons .tipox {
+  margin-left: 1em;
+}
+.orderIcons h3 {
+  margin-top: 0.5em;
+}
+.orderIcons .statuto {
+  margin-left: auto;
+}/*# sourceMappingURL=pickDropInf.css.map */

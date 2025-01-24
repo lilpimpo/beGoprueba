@@ -1,0 +1,87 @@
+body{
+    margin:0px;
+    padding: 0px;
+}
+.grey-dot-bg::before {
+    content: "•";
+    color: grey;
+    margin-right: 5px;
+    font-size: 2em; 
+    vertical-align: middle;
+}
+
+.blue-dot-bg::before {
+    content: "•";
+    color: blue;
+    margin-right: 5px;
+    font-size: 2em; 
+    vertical-align: middle;
+}
+
+.listaNoStylo {
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+
+   
+}
+
+
+.tablaInfo{
+    position: relative;
+    border:1px solid;
+    border-radius: 2em;
+    //border-image: repeating-linear-gradient(to right, white, black 35%, white 40%) 1;
+    width: 70%;
+    max-height: fit-content;
+
+    .orderNumba{
+        font-size: 1em;
+        font-weight: normal;
+        color: #6e6e6e;
+        display: inline-flex;
+        position: relative;
+        margin-right: auto;
+        
+        p{
+            font-weight: bold;
+            margin-left:4px;
+            margin-top: 0px;
+            color:#fff;
+
+        }
+       
+    }
+    
+
+}
+
+.statusTexto{
+    display: inline;
+    font-size: 12px;
+    margin-right: 16px;
+}
+
+.orderIcons{
+    position: relative;
+    display: inline-flex;
+    border-bottom: 1px solid rgb(131, 131, 131);
+    width: 100%;
+    .traile{
+        vertical-align: bottom;
+        margin-left: 16px;
+        margin-top: 5px;
+        
+    }
+    .tipox{
+        margin-left: 1em;
+    }
+    h3{
+    
+        margin-top: 0.5em;
+    }
+    .statuto{
+      margin-left: auto;
+       
+    }
+}
