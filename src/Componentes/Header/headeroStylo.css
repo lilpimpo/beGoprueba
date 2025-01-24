@@ -1,0 +1,25 @@
+.headerCont {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  width: 100%;
+}
+.headerCont .nombreHeader {
+  font-size: 24px;
+  white-space: nowrap;
+  color: white;
+}
+.headerCont .linki, .headerCont:active, .headerCont:focus {
+  color: white;
+}
+.headerCont .atras:hover,
+.headerCont .atras:focus,
+.headerCont .atras:active,
+.headerCont .notifications:hover,
+.headerCont .notifications:active,
+.headerCont .notifications:focus {
+  cursor: pointer;
+  stroke: #FFEE00;
+  fill: #FFEE00;
+}/*# sourceMappingURL=headeroStylo.css.map */

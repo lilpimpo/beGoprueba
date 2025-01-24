@@ -1,0 +1,33 @@
+.search-container {
+  display: flex;
+  align-items: center;
+  border-width: 0px 0px 2px 0px;
+  border-style: solid;
+  border-color: #959595;
+}
+
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+input::-moz-placeholder {
+  animation: fadeInOut 1s infinite;
+}
+input::placeholder {
+  animation: fadeInOut 1s infinite;
+}
+
+.findero {
+  padding: 16px;
+  width: 100%;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  padding: 6px 0px;
+  background-color: black;
+  color: white;
+}/*# sourceMappingURL=findrStylo.css.map */

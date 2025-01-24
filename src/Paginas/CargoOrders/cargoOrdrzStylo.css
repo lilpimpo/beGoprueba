@@ -1,0 +1,27 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+.opciones {
+  display: flex;
+  justify-content: space-between;
+}
+.opciones a {
+  display: inline-flex;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+.opciones a:hover, .opciones a:active, .opciones a:focus,
+.opciones a a.active {
+  color: #FFEE00;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}/*# sourceMappingURL=cargoOrdrzStylo.css.map */

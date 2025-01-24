@@ -1,0 +1,50 @@
+
+$amarMain : #FFEE00;
+
+@mixin ButtSinEstilo(){
+    
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    outline: none;
+    appearance: none;
+    
+}
+
+
+.headerCont{
+    display:inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    top:0;
+    width: 100%;
+
+    .nombreHeader{
+        font-size: 24px;
+        white-space: nowrap;
+        color:#FFFF;
+    }
+    .linki,
+    &:active,
+    &:focus{
+        color:white;
+       
+    }
+    .atras:hover,
+    .atras:focus,
+    .atras:active,
+    .notifications:hover,
+    .notifications:active,
+    .notifications:focus
+   {
+            cursor: pointer;
+            stroke:$amarMain;  
+            fill: $amarMain; 
+    }
+   
+    
+
+
+}
