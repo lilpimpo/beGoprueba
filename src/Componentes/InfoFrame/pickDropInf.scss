@@ -1,6 +1,6 @@
 body{
     margin:0px;
-    padding: 0px;
+    padding: 0.4em;
 }
 .grey-dot-bg::before {
     content: "•";
@@ -12,76 +12,149 @@ body{
 
 .blue-dot-bg::before {
     content: "•";
-    color: blue;
+    color:#0C7DED;
     margin-right: 5px;
     font-size: 2em; 
     vertical-align: middle;
 }
 
+.listaNoStyloReco{
+  padding: 0;
+  margin:0;
+  list-style: none;
+}
+
 .listaNoStylo {
-    list-style: none; 
-    padding: 0;
-    margin: 0;
-
-   
-}
-
-
-.tablaInfo{
-    position: relative;
-    border:1px solid;
-    border-radius: 2em;
-    //border-image: repeating-linear-gradient(to right, white, black 35%, white 40%) 1;
-    width: 70%;
-    max-height: fit-content;
-
-    .orderNumba{
-        font-size: 1em;
-        font-weight: normal;
-        color: #6e6e6e;
-        display: inline-flex;
-        position: relative;
-        margin-right: auto;
-        
-        p{
-            font-weight: bold;
-            margin-left:4px;
-            margin-top: 0px;
-            color:#fff;
-
-        }
-       
+  display: grid;
+  list-style: none;
+  padding: 0;
+  margin:1em;
+  grid-template-columns: auto auto auto ;
+  grid-template-rows: 1fr;
+  align-items: center;
+  //border:1px solid greenyellow;
+  .ciudadYpick{
+    display: grid;
+    grid-template-columns: minmax(1fr,1000px); 
+    border:1px solid orchid;
+    .pickOrDrop{
+      color:#666;
     }
-    
+  }
+
+  .carrillo {
+    grid-column: 1 / 2; /* Start at column 1 and span 1 column */
+    grid-row: 1 / 2; /* Start at row 1 and span 1 row */
+  }
+  
+  .ubi {
+    grid-column: 1 / 2; /* Start at column 1 and span 1 column */
+    grid-row: 2 / 3; /* Start at row 2 and span 1 row */
+
 
 }
-
-.statusTexto{
-    display: inline;
-    font-size: 12px;
-    margin-right: 16px;
 }
 
-.orderIcons{
-    position: relative;
-    display: inline-flex;
-    border-bottom: 1px solid rgb(131, 131, 131);
+.orderInfoCont{ //esto es el contenedor madre no se stylea + que para da el margen
+  //border:2px solid red;
+  margin: 0.2em;
+}
+
+.bordeo{
+  border: 1px solid #fff;
+  border-radius: 2em;
+}
+
+
+.tablaInfo {
+  position: relative;
+  background-color: #121212;
+
+  margin: 0.4em;
+  .buttonsi {
+    //border: 1px solid green;//guia x si se necesita
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    //position: absolute;
+    bottom:0;
     width: 100%;
-    .traile{
-        vertical-align: bottom;
-        margin-left: 16px;
-        margin-top: 5px;
-        
-    }
-    .tipox{
-        margin-left: 1em;
-    }
-    h3{
     
-        margin-top: 0.5em;
+    
+    button{
+      position: relative;
+      width: 45%;
+      height: 3em;
+      font-size: 1em;
+      
     }
-    .statuto{
-      margin-left: auto;
-       
+    .timePickDrop{
+      
+      align-self: flex-start;
+      border-bottom-right-radius: 2em;
+      border-top-right-radius: 2em;
+      border-bottom-left-radius: 2em;
+      border-top-left-radius: 0px;
+      font-weight: bold;
+      
     }
+    .resumenx{
+      display: inline-flex;
+      align-self: flex-end;
+      color:#000000;
+      font-weight: bold;
+      border-radius: 2em;
+    }
+    
+  }
+  
+
+
 }
+
+.orderNumba {
+  display: flex;
+  font-weight: lighter;
+  color:#666;
+  background-color: #000000;
+ 
+ // grid-area: orderNumba;
+  p{
+    margin:0;
+    font-weight: bold;
+    color: #fff;
+    padding-left: 0.4em;
+    
+  }
+}
+
+.orderIcons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 0.8em;
+}
+
+.tipox {
+  margin-left: 0.5em;
+}
+
+.statuto {
+ position: absolute;
+  top: 3.7em;
+  right: 0;
+  padding-right: 0.8em;
+  p {
+    display: inline-flex;
+  }
+}
+
+
+
+
+
+
+
+
+

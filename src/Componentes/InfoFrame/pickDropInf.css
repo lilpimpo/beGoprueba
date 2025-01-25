@@ -1,7 +1,7 @@
 @charset "UTF-8";
 body {
   margin: 0px;
-  padding: 0px;
+  padding: 0.4em;
 }
 
 .grey-dot-bg::before {
@@ -14,64 +14,117 @@ body {
 
 .blue-dot-bg::before {
   content: "•";
-  color: blue;
+  color: #0C7DED;
   margin-right: 5px;
   font-size: 2em;
   vertical-align: middle;
 }
 
-.listaNoStylo {
-  list-style: none;
+.listaNoStyloReco {
   padding: 0;
   margin: 0;
+  list-style: none;
+}
+
+.listaNoStylo {
+  display: grid;
+  list-style: none;
+  padding: 0;
+  margin: 1em;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: 1fr;
+  align-items: center;
+}
+.listaNoStylo .ciudadYpick {
+  display: grid;
+  grid-template-columns: minmax(1fr, 1000px);
+  border: 1px solid orchid;
+}
+.listaNoStylo .ciudadYpick .pickOrDrop {
+  color: #666;
+}
+.listaNoStylo .carrillo {
+  grid-column: 1/2; /* Start at column 1 and span 1 column */
+  grid-row: 1/2; /* Start at row 1 and span 1 row */
+}
+.listaNoStylo .ubi {
+  grid-column: 1/2; /* Start at column 1 and span 1 column */
+  grid-row: 2/3; /* Start at row 2 and span 1 row */
+}
+
+.orderInfoCont {
+  margin: 0.2em;
+}
+
+.bordeo {
+  border: 1px solid #fff;
+  border-radius: 2em;
 }
 
 .tablaInfo {
   position: relative;
-  border: 1px solid;
-  border-radius: 2em;
-  width: 70%;
-  max-height: -moz-fit-content;
-  max-height: fit-content;
+  background-color: #121212;
+  margin: 0.4em;
 }
-.tablaInfo .orderNumba {
-  font-size: 1em;
-  font-weight: normal;
-  color: #6e6e6e;
-  display: inline-flex;
+.tablaInfo .buttonsi {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  bottom: 0;
+  width: 100%;
+}
+.tablaInfo .buttonsi button {
   position: relative;
-  margin-right: auto;
+  width: 45%;
+  height: 3em;
+  font-size: 1em;
 }
-.tablaInfo .orderNumba p {
+.tablaInfo .buttonsi .timePickDrop {
+  align-self: flex-start;
+  border-bottom-right-radius: 2em;
+  border-top-right-radius: 2em;
+  border-bottom-left-radius: 2em;
+  border-top-left-radius: 0px;
   font-weight: bold;
-  margin-left: 4px;
-  margin-top: 0px;
-  color: #fff;
+}
+.tablaInfo .buttonsi .resumenx {
+  display: inline-flex;
+  align-self: flex-end;
+  color: #000000;
+  font-weight: bold;
+  border-radius: 2em;
 }
 
-.statusTexto {
-  display: inline;
-  font-size: 12px;
-  margin-right: 16px;
+.orderNumba {
+  display: flex;
+  font-weight: lighter;
+  color: #666;
+  background-color: #000000;
+}
+.orderNumba p {
+  margin: 0;
+  font-weight: bold;
+  color: #fff;
+  padding-left: 0.4em;
 }
 
 .orderIcons {
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 0.8em;
+}
+
+.tipox {
+  margin-left: 0.5em;
+}
+
+.statuto {
+  position: absolute;
+  top: 3.7em;
+  right: 0;
+  padding-right: 0.8em;
+}
+.statuto p {
   display: inline-flex;
-  border-bottom: 1px solid rgb(131, 131, 131);
-  width: 100%;
-}
-.orderIcons .traile {
-  vertical-align: bottom;
-  margin-left: 16px;
-  margin-top: 5px;
-}
-.orderIcons .tipox {
-  margin-left: 1em;
-}
-.orderIcons h3 {
-  margin-top: 0.5em;
-}
-.orderIcons .statuto {
-  margin-left: auto;
 }/*# sourceMappingURL=pickDropInf.css.map */

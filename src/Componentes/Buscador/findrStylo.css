@@ -21,9 +21,9 @@ input::placeholder {
   animation: fadeInOut 1s infinite;
 }
 
-.findero {
+.findr {
   padding: 16px;
-  width: 100%;
+  width: 80%;
   font-size: 16px;
   border: none;
   outline: none;

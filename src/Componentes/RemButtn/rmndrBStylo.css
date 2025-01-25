@@ -1,0 +1,10 @@
+button.enabled {
+  color: #000000;
+  background-color: #ffee00;
+  pointer-events: auto;
+}
+button.disabled {
+  color: #ffffff;
+  background-color: gray;
+  pointer-events: none;
+}/*# sourceMappingURL=rmndrBStylo.css.map */

@@ -1,0 +1,23 @@
+.navigate-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: #ffee00;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.navigate-button:hover {
+  background-color: rgb(134, 128, 59);
+}
+.navigate-button .button-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navigate-button .eye-icon {
+  margin-left: 8px;
+}/*# sourceMappingURL=navButtStylo.css.map */

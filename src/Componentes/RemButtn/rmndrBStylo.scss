@@ -1,0 +1,14 @@
+button {
+    &.enabled {
+      color: #000000;
+      background-color: #ffee00ff;
+      pointer-events: auto;
+    }
+  
+    &.disabled {
+      color:#ffffff;
+      background-color: gray;
+      pointer-events: none;
+    }
+  }
+  
