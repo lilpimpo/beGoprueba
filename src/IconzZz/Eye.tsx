@@ -1,4 +1,4 @@
-import * as React from "react";
+
 import type { SVGProps } from "react";
 const SvgEye = (props: SVGProps<SVGSVGElement>) => (
   <svg
@@ -6,6 +6,8 @@ const SvgEye = (props: SVGProps<SVGSVGElement>) => (
     xmlSpace="preserve"
     width="1em"
     height="1em"
+    fill="currentColor"
+    stroke="currentColor"
     viewBox="0 0 442.04 442.04"
     {...props}
   >
