@@ -53,6 +53,29 @@ body{
       font-size: 0.8em;
       margin: 0;
     }
+
+    @media (max-width: 350px) {
+      .svgCont {
+        font-size: 0.2em;
+      }
+  
+      .carrillo,
+      .ubi {
+        font-size: 0.1em; 
+      }
+  
+      .pickOrDrop {
+        font-size: 0.9em; 
+      }
+  
+      .ciudad {
+        font-size: 0.9em; 
+      }
+  
+      .direccioni {
+        font-size: 0.6em; 
+      }
+    }
   }
 
   .datosEsp {
@@ -62,7 +85,10 @@ body{
     padding-right: 1em;
     max-width: 100%; 
     position: relative;
-    right:3em;
+    right:0.3em;
+    @media (max-width: 350px) {
+      right: 6em;
+    }
   }
 
   .carrillo {

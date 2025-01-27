@@ -53,13 +53,36 @@ body {
   font-size: 0.8em;
   margin: 0;
 }
+@media (max-width: 350px) {
+  .listaNoStylo .ciudadYpick .svgCont {
+    font-size: 0.2em;
+  }
+  .listaNoStylo .ciudadYpick .carrillo,
+  .listaNoStylo .ciudadYpick .ubi {
+    font-size: 0.1em;
+  }
+  .listaNoStylo .ciudadYpick .pickOrDrop {
+    font-size: 0.9em;
+  }
+  .listaNoStylo .ciudadYpick .ciudad {
+    font-size: 0.9em;
+  }
+  .listaNoStylo .ciudadYpick .direccioni {
+    font-size: 0.6em;
+  }
+}
 .listaNoStylo .datosEsp {
   font-size: 0.6em;
   font-weight: bold;
   padding-right: 1em;
   max-width: 100%;
   position: relative;
-  right: 3em;
+  right: 0.3em;
+}
+@media (max-width: 350px) {
+  .listaNoStylo .datosEsp {
+    right: 6em;
+  }
 }
 .listaNoStylo .carrillo {
   grid-column: 1/2;
