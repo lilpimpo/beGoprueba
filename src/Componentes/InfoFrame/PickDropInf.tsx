@@ -62,7 +62,7 @@ function formatDateAndTime(timestamp: number) {
   return { formattedDate, formattedTime };
 }
 
-function PickNdDrop({ searchQuery, order2show, showButt }: { searchQuery: string, order2show?: string, showButt?: string }) {
+function PickNdDrop({ searchQuery, order2show, showButt, onDestinationClick }: { searchQuery: string, order2show?: string, showButt?: string, onDestinationClick: (nickname: string) => void }) {
   const data = apiDatosUpcoming.read();
 
   const filteredOrders = data?.result.filter((upcoming: Upcoming) =>
@@ -97,10 +97,10 @@ function PickNdDrop({ searchQuery, order2show, showButt }: { searchQuery: string
               {upcoming.destinations.map((destination: Destination, index: number) => {
                 const { formattedDate, formattedTime } = formatDateAndTime(destination.start_date);
                 return (
-                  <li className="listaNoStylo" key={`${upcoming._id}-${index}`}>
+                  <li className="listaNoStylo" key={`${upcoming._id}-${index}`} onClick={() => onDestinationClick(destination.nickname)}>
                     <div className="svgCont">
                       {destination.nickname === 'Recolección' ? (
-                        <Carrillo className="carrillo" width={38} height={38} fill='white' stroke="#fff" />
+                        <Carrillo className="carrillo" width={38} height={38} stroke="#fff" fill='white' />
                       ) : destination.nickname === 'Entrega' ? (
                         <Ubi className="ubi" width={38} height={38} />
                       ) : null}
@@ -131,10 +131,10 @@ function PickNdDrop({ searchQuery, order2show, showButt }: { searchQuery: string
   );
 }
 
-function PickDrop({ searchQuery, order2show, showButt }: { searchQuery: string, order2show?: string, showButt?: string }) {
+function PickDrop({ searchQuery, order2show, showButt, onDestinationClick }: { searchQuery: string, order2show?: string, showButt?: string, onDestinationClick: (nickname: string) => void }) {
   return (
     <Suspense fallback={<div>Cargando...</div>}>
-      <PickNdDrop searchQuery={searchQuery} order2show={order2show} showButt={showButt} />
+      <PickNdDrop searchQuery={searchQuery} order2show={order2show} showButt={showButt} onDestinationClick={onDestinationClick} />
     </Suspense>
   );
 }

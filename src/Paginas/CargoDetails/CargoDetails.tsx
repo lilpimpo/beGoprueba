@@ -4,14 +4,13 @@ import Headero from '../../Componentes/Header/Headero';
 import Dialogo from '../../Componentes/Despliegue/Dialogg';
 import TrackOrd from '../../Componentes/TrackOrder/TrackOrd';
 import PickDrop from '../../Componentes/InfoFrame/PickDropInf';
-import { FetchData } from '../../FetchDat';
 import { Upcoming } from '../../Componentes/InfoFrame/PickDropInf';
 
-const apiDatosUpcoming = FetchData<{ result: Upcoming[] }>('https://129bc152-6319-4e38-b755-534a4ee46195.mock.pstmn.io/orders/upcoming');
 
 function CargoDetails() {
   const { id } = useParams<{ id: string }>();
   const [orderNumber, setOrderNumber] = useState<string | null>(null);
+  const [selectedContent, setSelectedContent] = useState<'recoleccion' | 'entrega'>('recoleccion');
 
   useEffect(() => {
     const fetchOrderDetails = async () => {
@@ -27,13 +26,22 @@ function CargoDetails() {
     fetchOrderDetails();
   }, [id]);
 
+  const handleDestinationClick = (nickname: string) => {
+    setSelectedContent(nickname === 'Recolección' ? 'recoleccion' : 'entrega');
+    const detailsElement = document.querySelector('.details-container');
+    if (detailsElement && !detailsElement.hasAttribute('open')) {
+      detailsElement.setAttribute('open', 'true');
+    }
+    detailsElement?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <>
       <Headero seccName='Cargo Details' />
-      {orderNumber && <PickDrop searchQuery="" showButt='none' order2show={orderNumber} />}
+      {orderNumber && <PickDrop searchQuery="" showButt='none' order2show={orderNumber} onDestinationClick={handleDestinationClick} />}
       <div className="cargoDetails">
         <TrackOrd />
-        <Dialogo />
+        <Dialogo selectedContent={selectedContent} />
       </div>
     </>
   );
