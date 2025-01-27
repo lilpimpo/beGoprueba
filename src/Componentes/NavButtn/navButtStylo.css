@@ -10,7 +10,7 @@
   cursor: pointer;
   font-size: 16px;
 }
-.navigate-button:hover {
+.navigate-button:hover, .navigate-button:active, .navigate-button:focus {
   background-color: rgb(134, 128, 59);
 }
 .navigate-button .button-content {

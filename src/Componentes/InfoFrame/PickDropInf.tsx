@@ -1,13 +1,14 @@
 import { Suspense } from 'react';
+import { Link } from 'react-router-dom';
 import { FetchData } from '../../FetchDat';
 import { Traile, Carrillo, Ubi } from '../../IconzZz';
-import NavButtn from '../NavButtn/NavButtn';
+//import NavButtn from '../NavButtn/NavButtn';
 import RemndrButtn from '../RemButtn/RemndrButtn';
 import './pickDropInf.css';
 
 const apiDatosUpcoming = FetchData<{ result: Upcoming[] }>('https://129bc152-6319-4e38-b755-534a4ee46195.mock.pstmn.io/orders/upcoming');
 
-interface Destination {
+export interface Destination {
   address: string;
   start_date: number;
   end_date: number;
@@ -15,8 +16,8 @@ interface Destination {
   show_navigation: boolean;
 }
 
-interface Upcoming {
-  _id: number;
+export interface Upcoming {
+  _id: string;
   driver: string;
   type: string;
   order_number: string;
@@ -89,9 +90,9 @@ function PickNdDrop({ searchQuery }: { searchQuery: string }) {
                 <li className="listaNoStylo" key={`${upcoming._id}-${index}`}>
                   <div className="svgCont">
                     {destination.nickname === 'Recolección' ? (
-                      <Carrillo className="carrillo" width={60} height={60} fill="white" stroke="#fff" />
+                      <Carrillo className="carrillo" width={50} height={50}  stroke="#fff" />
                     ) : destination.nickname === 'Entrega' ? (
-                      <Ubi className="ubi" width={60} height={60} />
+                      <Ubi className="ubi" width={50} height={50} />
                     ) : null}
                   </div>
 
@@ -111,7 +112,7 @@ function PickNdDrop({ searchQuery }: { searchQuery: string }) {
 
           <div className="buttonsi">
             <RemndrButtn countdownTime={26000} className="timePickDrop" />
-            <NavButtn to="details" className="resumenx" title="Resume" />
+            <Link to={`/details/${upcoming._id}`} className="resumenx">Resume</Link>
           </div>
 
         </div>

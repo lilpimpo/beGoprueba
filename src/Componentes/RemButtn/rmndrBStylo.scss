@@ -4,6 +4,13 @@ button {
       background-color: #ffee00ff;
       pointer-events: auto;
     }
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: rgb(134, 128, 59);
+      color:whitesmoke;
+    }
   
     &.disabled {
       color:#ffffff;

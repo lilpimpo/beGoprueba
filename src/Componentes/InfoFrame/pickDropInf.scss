@@ -35,10 +35,17 @@ body{
   //border:1px solid greenyellow;
   .ciudadYpick{
     display: grid;
-    grid-template-columns: minmax(1fr,1000px); 
-    border:1px solid orchid;
+    grid-template-columns: minmax(200px,1200px); 
+    justify-items: start;
+    margin-left: 2rem;
+    //border:1px solid orchid;
     .pickOrDrop{
       color:#666;
+    }
+    .ciudad{
+      margin: 0;
+      font-weight: bolder;
+      
     }
   }
 
@@ -63,12 +70,13 @@ body{
 .bordeo{
   border: 1px solid #fff;
   border-radius: 2em;
+  background-color: #121212;
 }
 
 
 .tablaInfo {
   position: relative;
-  background-color: #121212;
+  
 
   margin: 0.4em;
   .buttonsi {
@@ -99,14 +107,38 @@ body{
       font-weight: bold;
       
     }
-    .resumenx{
-      display: inline-flex;
-      align-self: flex-end;
-      color:#000000;
-      font-weight: bold;
-      border-radius: 2em;
-    }
+   // .resumenx{
+     // display: inline-flex;
+     // align-self: flex-end;
+     // color:#000000;
+      //font-weight: bold;
+     // border-radius: 2em;
+   // }
+    .resumenx {
     
+      width: 45%;
+      height: 1.7em;
+      font-size: 1em;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      background-color: #ffee00ff;
+      color: rgb(0, 0, 0);
+      font-weight: bold;
+      border: none;
+      border-radius: 2em;
+      cursor: pointer;
+      text-decoration: none; 
+
+      &:hover,
+      &:active,
+      &:focus{
+
+        background-color: rgb(134, 128, 59);
+        color:whitesmoke;
+      }
+    }
   }
   
 

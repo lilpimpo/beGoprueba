@@ -11,7 +11,7 @@ export const router = createBrowserRouter([
         element:<App/>,
         children:[
             {path:"",element:<CargoOrdrz/>},
-            {path:"details",element:<CargoDetails/>},
+            {path:"/details/:id",element:<CargoDetails/>},
             {path:"oops!",element:<NoHay/>}
 
         ]

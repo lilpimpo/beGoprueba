@@ -17,7 +17,7 @@ function Headero({ seccName }: HeaderoPropz) {
 
             <h1 className="nombreHeader">{seccName}</h1>
             
-            <NotificationsX width={30} height={30} className="notifications" fill="white" strokeWidth={0.8} />
+            <NotificationsX width={30} height={30} className="notifications" strokeWidth={0.8} />
         </div>
     );
 }

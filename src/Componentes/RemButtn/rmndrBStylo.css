@@ -3,6 +3,10 @@ button.enabled {
   background-color: #ffee00;
   pointer-events: auto;
 }
+button:hover, button:focus, button:active {
+  background-color: rgb(134, 128, 59);
+  color: whitesmoke;
+}
 button.disabled {
   color: #ffffff;
   background-color: gray;
