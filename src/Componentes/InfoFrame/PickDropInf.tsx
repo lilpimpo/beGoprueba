@@ -2,7 +2,6 @@ import { Suspense } from 'react';
 import { Link } from 'react-router-dom';
 import { FetchData } from '../../FetchDat';
 import { Traile, Carrillo, Ubi } from '../../IconzZz';
-//import NavButtn from '../NavButtn/NavButtn';
 import RemndrButtn from '../RemButtn/RemndrButtn';
 import './pickDropInf.css';
 
@@ -34,6 +33,13 @@ function replaceAddress(address: string): string {
   } else {
     return address;
   }
+}
+function truncateAddress(address : string) {
+  const maxLength = 27;
+  if (address.length > maxLength) {
+    return address.substring(0, maxLength) + '...';
+  }
+  return address;
 }
 
 function formatDateAndTime(timestamp : number) {
@@ -99,7 +105,7 @@ function PickNdDrop({ searchQuery }: { searchQuery: string }) {
                   <div className="ciudadYpick">
                     <p className="pickOrDrop">{destination.nickname}</p>
                     <p className="ciudad"> {replaceAddress(destination.address)}</p>
-                    <p className="direccioni">{destination.address}</p>
+                    <p className="direccioni">{truncateAddress(destination.address)}</p>
                   </div>
                   <div className="datosEsp">
                       <p className="startDate">{formattedDate}</p>

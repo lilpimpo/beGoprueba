@@ -32,21 +32,35 @@ body{
   grid-template-columns: auto auto auto ;
   grid-template-rows: 1fr;
   align-items: center;
-  //border:1px solid greenyellow;
+
   .ciudadYpick{
     display: grid;
     grid-template-columns: minmax(200px,1200px); 
     justify-items: start;
     margin-left: 2rem;
-    //border:1px solid orchid;
+  
     .pickOrDrop{
       color:#666;
+      margin: 0;
     }
     .ciudad{
       margin: 0;
       font-weight: bolder;
       
     }
+
+    .direccioni{
+      font-size: 0.8em;
+      margin: 0;
+    }
+  }
+
+  .datosEsp {
+    //overflow: hidden; 
+    font-size: 0.6em;
+    font-weight: bold;
+    padding-right: 1em;
+    max-width: 100%; 
   }
 
   .carrillo {
@@ -63,33 +77,28 @@ body{
 }
 
 .orderInfoCont{ //esto es el contenedor madre no se stylea + que para da el margen
-  //border:2px solid red;
   margin: 0.2em;
 }
 
 .bordeo{
-  border: 1px solid #fff;
+  border: 1px solid honeydew;
   border-radius: 2em;
   background-color: #121212;
+
 }
+
 
 
 .tablaInfo {
   position: relative;
-  
-
   margin: 0.4em;
   .buttonsi {
-    //border: 1px solid green;//guia x si se necesita
-
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    //position: absolute;
     bottom:0;
     width: 100%;
-    
-    
+  
     button{
       position: relative;
       width: 45%;
@@ -151,7 +160,6 @@ body{
   color:#666;
   background-color: #000000;
  
- // grid-area: orderNumba;
   p{
     margin:0;
     font-weight: bold;
