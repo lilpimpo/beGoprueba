@@ -10,19 +10,26 @@
   flex-direction: column;
   align-items: flex-start;
   position: relative;
-  width: 200px;
+  min-width: 6em;
   height: 400px;
-  margin: 20px 0;
+  margin: 20px;
   border: 1px solid #ccc;
-  padding: 10px;
+  padding: 2em;
   border-radius: 8px;
+  justify-content: space-between;
+}
+
+.time-display {
+  font-size: 2em; 
+  margin-bottom: 20px;
+  align-self: center;
 }
 
 .progress-bar-vertical {
   position: absolute;
-  left: 20px;
+  left: 3em;
   top: 0;
-  width: 4px;
+  width: 3px;
   height: 0;
   background-color: yellow;
   transition: height 0.3s;
@@ -36,8 +43,8 @@
 }
 
 .step {
-  width: 40px; /* Fixed width */
-  height: 40px; /* Fixed height */
+  width: 2em;
+  height: 2em;
   border-radius: 50%;
   background-color: gray;
   display: flex;
@@ -48,7 +55,7 @@
   position: relative;
   z-index: 1;
   transition: background-color 0.3s, color 0.3s;
-  flex-shrink: 0; /* Prevent shrinking */
+  flex-shrink: 0;
 }
 
 .step.completed {
@@ -75,17 +82,37 @@
   color: white;
 }
 
-button {
+.trackOrdButt {
   padding: 10px 20px;
-  font-size: 16px;
+  font-size: 1em;
   cursor: pointer;
-  background-color: #007bff;
+  background-color: #FFEE00;
   color: white;
   border: none;
   border-radius: 4px;
   transition: background-color 0.3s;
+  width: 100%; 
+  align-self: flex-end; 
 }
 
-button:hover {
-  background-color: #0056b3;
+.trackOrdButt:hover {
+  background-color: rgb(134, 128, 59);
+}
+
+.trackOrdButt:disabled {
+  background-color: gray;
+  cursor: not-allowed;
+}
+
+.avatarImg{
+  .avatar{
+
+    border: 2px solid #666;
+    background-color: #2a2a2a;
+    border-radius: 5em;
+    font-size: 4.2em;
+    position: absolute;
+    left: 45%;
+    top:-10%;
+  }
 }

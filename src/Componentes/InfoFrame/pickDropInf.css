@@ -58,14 +58,16 @@ body {
   font-weight: bold;
   padding-right: 1em;
   max-width: 100%;
+  position: relative;
+  right: 3em;
 }
 .listaNoStylo .carrillo {
-  grid-column: 1/2; /* Start at column 1 and span 1 column */
-  grid-row: 1/2; /* Start at row 1 and span 1 row */
+  grid-column: 1/2;
+  grid-row: 1/2;
 }
 .listaNoStylo .ubi {
-  grid-column: 1/2; /* Start at column 1 and span 1 column */
-  grid-row: 2/3; /* Start at row 2 and span 1 row */
+  grid-column: 1/2;
+  grid-row: 2/3;
 }
 
 .orderInfoCont {

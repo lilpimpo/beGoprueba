@@ -6,3 +6,4 @@ export { default as Search } from "./Search";
 export { default as Traile } from "./Traile";
 export { default as Tren } from "./Tren";
 export { default as Ubi } from "./Ubi";
+export { default as User } from "./User";
